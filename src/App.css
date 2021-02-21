@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to right, rgb(51, 204, 255) 0%, rgb(179, 236, 255) 100%);
+  font-size: 15px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+  flex-basis: 100%;
+}
+
+.App{
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.App-header{
+  flex-basis: 100%;
+  text-align: center;
+  padding: 0.5em;
+  border-bottom: 3px solid black;
   color: white;
+  text-shadow: 3px 3px black;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.lista-div{
+  height: 700px;
+  max-height: 700px;
+  max-width: 1200px;
+  width: 1200px;
+  padding:1em;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lista-poruka{
+  width: 1180px;
+  height: 100%;
+  background-color:white;
+  border-radius: 10px;
+  border: 2px solid black;
+  list-style: none;
+  padding: 1em;
+  font-size: 20px;
+  overflow: auto;
 }
+
+.poruka-trenutni-korisnik{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.poruka{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.poruka-sadrzaj-trenutni{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 50%;
+  margin-bottom: 5px;
+}
+
+.poruka-sadrzaj{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.username{
+  flex-basis: 100%;
+  color: gray;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.poruka-sadrzaj-trenutni > .username{
+  text-align: right;
+}
+
+.boja-poruke-trenutni{
+  max-width: 100%;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+  background-color:  rgb(51, 204, 255);
+  border-radius: 10px;
+  padding: 0.5em;
+  word-break: break-all;
+}
+
+.boja-poruke{
+  max-width: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(255, 153, 0);
+  border-radius: 10px;
+  padding: 0.5em;
+  display: flex;
+  word-break: break-all;
+}
+
+.input-div{
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  word-break: break-all;
+}
+
+.form{
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:10px;
+}
+
+.inp{
+  flex-basis: 30%;
+  padding: 1em;
+}
+
+.btn{
+  flex-basis: 10%;
+  margin-left: 15px;
+  background-color: rgb(51, 204, 255);
+  font-weight: bold;
+  border: none;
+}
+
+.btn:checked{
+  border: none;
+}
+
+.footer{
+  flex-basis: 100%;
+  text-align: center;
+  color: aliceblue;
+  font-size: 25px;
+  padding: 0.3em;
+  text-shadow: 1.5px 1.5px black;
+  border-top: 2px solid black;
+}
+
+
